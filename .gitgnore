@@ -1,0 +1,10 @@
+# sistema
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# gravações grandes (se usares)
+*.mp4
+*.mov
