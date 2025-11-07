@@ -1,5 +1,7 @@
 # Desafio de QA – Lacrei Saúde (Staging)
 
+[![CI - Cypress E2E](https://github.com/ThamiresMarina/qalacreisaude/actions/workflows/ci.yml/badge.svg)](https://github.com/ThamiresMarina/qalacreisaude/actions/workflows/ci.yml)
+
 Este repositório apresenta a análise de qualidade, execução de testes manuais, registro de bugs, testes de acessibilidade, desempenho, responsividade e automação do fluxo de **Cadastro de Pessoa Usuária** da plataforma Lacrei Saúde (ambiente de staging).
 
 
