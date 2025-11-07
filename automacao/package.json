@@ -1,0 +1,22 @@
+{
+  "name": "automacao",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --browser chrome --spec \"cypress/e2e/features/cadastro.feature\"",
+    "test:ci": "cypress run --browser chrome --spec \"cypress/e2e/features/cadastro.feature\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^23.2.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.7",
+    "@cucumber/cucumber": "^12.2.0",
+    "cypress": "^15.6.0",
+    "faker": "^6.6.6"
+  }
+}
+

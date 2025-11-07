@@ -1,0 +1,17 @@
+# Dependências
+node_modules/
+
+# Artefactos do Cypress
+cypress/videos/
+cypress/screenshots/
+.cypress-cache/
+
+# Relatórios (se gerar)
+mochawesome-report/
+reports/
+coverage/
+
+# Config local
+.env
+
+
