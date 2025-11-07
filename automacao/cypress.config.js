@@ -1,18 +1,22 @@
 
 const { defineConfig } = require("cypress");
-const createBundler =
-  require("@bahmutov/cypress-esbuild-preprocessor");
+const createBundler = require("@bahmutov/cypress-esbuild-preprocessor");
 const addCucumberPreprocessorPlugin =
   require("@badeball/cypress-cucumber-preprocessor").addCucumberPreprocessorPlugin;
 const createEsbuildPlugin =
   require("@badeball/cypress-cucumber-preprocessor/esbuild").createEsbuildPlugin;
 
+const CYP = "automacao/cypress"; 
+
 module.exports = defineConfig({
   e2e: {
     
-    specPattern: "cypress/e2e/features/**/*.feature",
-    
-    supportFile: "cypress/support/e2e.js",
+    specPattern: `${CYP}/e2e/features/**/*.feature`,
+    supportFile: `${CYP}/support/e2e.js`,
+    screenshotsFolder: `${CYP}/screenshots`,
+    videosFolder: `${CYP}/videos`,
+    fixturesFolder: false,
+
     baseUrl: "https://paciente-staging.lacreisaude.com.br",
     viewportWidth: 412,
     viewportHeight: 915,
@@ -20,14 +24,12 @@ module.exports = defineConfig({
     video: true,
 
     async setupNodeEvents(on, config) {
-      
       await addCucumberPreprocessorPlugin(on, config);
       on("file:preprocessor", createBundler({ plugins: [createEsbuildPlugin(config)] }));
       return config;
     },
   },
 
-  
   reporter: "mochawesome",
   reporterOptions: {
     reportDir: "mochawesome-report",
@@ -37,3 +39,4 @@ module.exports = defineConfig({
     reportFilename: "cypress-report",
   },
 });
+
