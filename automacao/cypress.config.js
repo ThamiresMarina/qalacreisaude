@@ -1,4 +1,3 @@
-
 const { defineConfig } = require("cypress");
 const createBundler = require("@bahmutov/cypress-esbuild-preprocessor");
 const addCucumberPreprocessorPlugin =
@@ -6,11 +5,11 @@ const addCucumberPreprocessorPlugin =
 const createEsbuildPlugin =
   require("@badeball/cypress-cucumber-preprocessor/esbuild").createEsbuildPlugin;
 
-const CYP = "automacao/cypress"; 
+
+const CYP = "cypress"; 
 
 module.exports = defineConfig({
   e2e: {
-    
     specPattern: `${CYP}/e2e/features/**/*.feature`,
     supportFile: `${CYP}/support/e2e.js`,
     screenshotsFolder: `${CYP}/screenshots`,
@@ -39,4 +38,3 @@ module.exports = defineConfig({
     reportFilename: "cypress-report",
   },
 });
-

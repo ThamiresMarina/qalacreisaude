@@ -17,7 +17,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20.11.1'       # LTS estável
+          node-version: '20.11.1'       
           cache: 'npm'
           cache-dependency-path: automacao/package-lock.json
 
@@ -27,7 +27,7 @@ jobs:
 
       - name: Run Cypress (Chrome, headless)
         working-directory: automacao
-        run: npx cypress run --browser chrome --headless --config-file cypress.config.js
+        run: npx cypress run --browser chrome --headless
 
       - name: Upload Cypress artifacts (screenshots/videos)
         if: always()
