@@ -16,10 +16,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: '20.11.1'     
+          cache: 'npm'
+          cache-dependency-path: automacao/package-lock.json
 
       - name: Install dependencies
         run: npm ci
