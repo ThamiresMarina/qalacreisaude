@@ -2,12 +2,11 @@
   "name": "automacao",
   "version": "1.0.0",
   "main": "index.js",
- "scripts": {
-  "cy:open": "cypress open",
-  "cy:run": "cypress run",
-  "test": "cypress run"
-},
-
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test": "cypress run"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -17,7 +16,9 @@
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.7",
     "@cucumber/cucumber": "^12.2.0",
     "cypress": "^15.6.0",
-    "faker": "^6.6.6"
+    "faker": "^6.6.6",
+    "mochawesome": "^7.1.4",
+    "mochawesome-merge": "^5.0.0",
+    "mochawesome-report-generator": "^6.3.2"
   }
 }
-
